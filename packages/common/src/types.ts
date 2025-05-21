@@ -1,4 +1,6 @@
-import { z } from "zod";
+//import { z } from "zod";
+const { z } = require("zod");
+
 
 // CreateUser schema
 export const CreateUserSchema = z.object({
