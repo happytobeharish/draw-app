@@ -1,5 +1,12 @@
-export default function CanvasPage () {
-    return <div>
-<canvas width={500} height={500}></canvas>
-    </div>
-} 
+import { RoomCanvas } from "../../../components/RoomCanvas";
+
+export default async function CanvasPage({ params }: {
+    params: {
+        roomId: string
+    }
+}) {
+    const roomId = (await params).roomId;
+
+    return <RoomCanvas roomId={roomId} />
+   
+}
